@@ -1,0 +1,3 @@
+GET  http://localhost:5003/WeatherForecast
+
+GET http://localhost:44314

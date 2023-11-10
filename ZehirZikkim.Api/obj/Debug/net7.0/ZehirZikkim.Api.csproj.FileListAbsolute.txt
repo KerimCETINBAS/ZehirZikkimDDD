@@ -39,3 +39,12 @@
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/ZehirZikkim.Application.pdb
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/ZehirZikkim.Infrastructure.pdb
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/ZehirZikkim.Domain.pdb
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.csproj.AssemblyReference.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.GeneratedMSBuildEditorConfig.editorconfig
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.AssemblyInfoInputs.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.AssemblyInfo.cs
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.csproj.CoreCompileInputs.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.MvcApplicationPartsAssemblyInfo.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.dll
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/refint/ZehirZikkim.Api.dll
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.pdb

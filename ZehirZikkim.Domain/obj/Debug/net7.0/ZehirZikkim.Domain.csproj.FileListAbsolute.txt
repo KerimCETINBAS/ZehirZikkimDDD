@@ -1,3 +1,15 @@
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/bin/Debug/net7.0/ZehirZikkim.Domain.deps.json
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/bin/Debug/net7.0/ZehirZikkim.Domain.dll
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/bin/Debug/net7.0/ZehirZikkim.Domain.pdb
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.csproj.AssemblyReference.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.GeneratedMSBuildEditorConfig.editorconfig
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.AssemblyInfoInputs.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.AssemblyInfo.cs
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.csproj.CoreCompileInputs.cache
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.dll
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/refint/ZehirZikkim.Domain.dll
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.pdb
+//wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ref/ZehirZikkim.Domain.dll
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/bin/Debug/net7.0/ZehirZikkim.Domain.deps.json
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/bin/Debug/net7.0/ZehirZikkim.Domain.dll
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/bin/Debug/net7.0/ZehirZikkim.Domain.pdb
