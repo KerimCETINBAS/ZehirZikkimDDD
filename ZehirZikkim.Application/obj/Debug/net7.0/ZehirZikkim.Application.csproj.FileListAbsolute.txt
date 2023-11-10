@@ -1,0 +1,15 @@
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/bin/Debug/net7.0/ZehirZikkim.Application.deps.json
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/bin/Debug/net7.0/ZehirZikkim.Application.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/bin/Debug/net7.0/ZehirZikkim.Application.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.AssemblyInfoInputs.cache
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.AssemblyInfo.cs
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.csproj.CoreCompileInputs.cache
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/refint/ZehirZikkim.Application.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ref/ZehirZikkim.Application.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/bin/Debug/net7.0/ZehirZikkim.Domain.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/bin/Debug/net7.0/ZehirZikkim.Domain.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.csproj.AssemblyReference.cache
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/obj/Debug/net7.0/ZehirZikkim.Application.csproj.CopyComplete

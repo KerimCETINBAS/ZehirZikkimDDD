@@ -1,0 +1,17 @@
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Infrastructure.deps.json
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Infrastructure.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Infrastructure.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.AssemblyInfoInputs.cache
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.AssemblyInfo.cs
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.csproj.CoreCompileInputs.cache
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/refint/ZehirZikkim.Infrastructure.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ref/ZehirZikkim.Infrastructure.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Application.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Domain.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Application.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/bin/Debug/net7.0/ZehirZikkim.Domain.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.csproj.AssemblyReference.cache
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Infrastructure/obj/Debug/net7.0/ZehirZikkim.Infrastructure.csproj.CopyComplete

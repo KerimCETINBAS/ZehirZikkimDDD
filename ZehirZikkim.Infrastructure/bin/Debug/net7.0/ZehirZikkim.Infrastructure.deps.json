@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ZehirZikkim.Infrastructure/1.0.0": {
+        "dependencies": {
+          "ZehirZikkim.Application": "1.0.0"
+        },
+        "runtime": {
+          "ZehirZikkim.Infrastructure.dll": {}
+        }
+      },
+      "ZehirZikkim.Application/1.0.0": {
+        "dependencies": {
+          "ZehirZikkim.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ZehirZikkim.Application.dll": {}
+        }
+      },
+      "ZehirZikkim.Domain/1.0.0": {
+        "runtime": {
+          "ZehirZikkim.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZehirZikkim.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZehirZikkim.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZehirZikkim.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
