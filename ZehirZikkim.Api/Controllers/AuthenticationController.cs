@@ -46,7 +46,6 @@ public class AuthController : ControllerBase
         var authResult = authenticationService.Login(
             request.Email,
             request.Password
-
         );
 
         var response = new AuthenticationResponse(
