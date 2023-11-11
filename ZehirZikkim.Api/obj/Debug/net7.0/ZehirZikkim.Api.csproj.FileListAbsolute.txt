@@ -48,3 +48,8 @@
 //wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.dll
 //wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/refint/ZehirZikkim.Api.dll
 //wsl.localhost/Ubuntu/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/obj/Debug/net7.0/ZehirZikkim.Api.pdb
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Api/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
