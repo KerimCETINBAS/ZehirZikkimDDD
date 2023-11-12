@@ -1,6 +1,5 @@
 @BASE=http://localhost:5003
 
-
 POST {{BASE}}/auth/register
 Content-Type: application/json
 

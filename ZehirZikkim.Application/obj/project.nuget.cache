@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kvGvT6CecUjcHc02ls7hIiogX+LCdOmkyTdGe4tYnnHX2Af+RQfR05/doSZ4/uBD1oZdNt4X4mee4O2d36bMFw==",
+  "dgSpecHash": "Stc3g41FT2ttLaDFeLU8BEAL0fIImVG0S5Z1vnjwQ5BeUY8OQi8AbiKGwnaPMBjgdC1Gdl64sq3YfygpaiFCGg==",
   "success": true,
   "projectFilePath": "/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Application/ZehirZikkim.Application.csproj",
   "expectedPackageFiles": [
+    "/home/stella/.nuget/packages/erroror/1.3.0/erroror.1.3.0.nupkg.sha512",
     "/home/stella/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pEpiTwuJ7oEbXNUw5q9FQhTLu8DMpG8rD5o/HyDBWyO8eyhsS7yGsqu7VGrWzLStRmyr80UpItlAarAZnMg7IA==",
+  "dgSpecHash": "a8cmkasvRcoMLVW5LSKfGRkDqihizFmtuqZtkMv0txtE999qDUwP+x2iQZZLrD4LgtKOaO0EhKa6MrmjzNXgvw==",
   "success": true,
   "projectFilePath": "/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/ZehirZikkim.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/stella/.nuget/packages/erroror/1.3.0/erroror.1.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

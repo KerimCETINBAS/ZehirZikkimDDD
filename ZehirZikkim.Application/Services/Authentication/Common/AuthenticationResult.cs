@@ -1,4 +1,4 @@
-namespace ZehirZikkim.Application.Services.Authentication;
+namespace ZehirZikkim.Application.Services.Authentication.Common;
 
 
 public record AuthenticationResult(

@@ -121,6 +121,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "errorOr": {
+              "target": "Package",
+              "version": "[1.3.0, )"
             }
           },
           "imports": [
@@ -229,6 +233,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "errorOr": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
