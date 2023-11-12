@@ -65,7 +65,7 @@ public class AuthController : ApiController
             authResult.User.Email,
             authResult.Token);
     }   
-    }   
-}
+}   
+
 
 
