@@ -1,8 +1,9 @@
 
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ZehirZikkim.Application.Services.Authentication.Command;
-using ZehirZikkim.Application.Services.Authentication.Common;
-using ZehirZikkim.Application.Services.Authentication.Query;
+using ZehirZikkim.Application.Auhtentication.Commands.Register;
+using ZehirZikkim.Application.Auhtentication.Queries.Login;
+using ZehirZikkim.Application.Authentication.Common;
 using ZehirZikkim.Contracts.Authentication;
 
 
@@ -14,25 +15,22 @@ namespace ZehirZikkim.Api.Controllers;
 public class AuthController : ApiController
 {
     
-    private readonly IAuthenticationQueryService authenticationQueryService;
-    private readonly IAuthenticationCommandService authenticationCommandService;
+    private readonly ISender mediator;
 
-    public AuthController(IAuthenticationCommandService authenticationCommandService, IAuthenticationQueryService authenticationQueryService)
+    public AuthController(ISender mediator)
     {
-        this.authenticationCommandService = authenticationCommandService;
-        this.authenticationQueryService = authenticationQueryService;
+        this.mediator = mediator;
     }
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request) {
+    public async Task<IActionResult> Register(RegisterRequest request) {
 
-        ErrorOr.ErrorOr<AuthenticationResult> authResult = authenticationCommandService.Register(
+        var command = new RegisterCommand(
             request.FirstName,
             request.LastName,
             request.Email,
-            request.Password
-
-        );
+            request.Password);
+        ErrorOr.ErrorOr<AuthenticationResult> authResult = await mediator.Send(command);
 
         return authResult.Match(
             authResult => Ok(MapResponse(authResult)),
@@ -43,12 +41,15 @@ public class AuthController : ApiController
     }
 
     [HttpPost("Login")]
-    public IActionResult Login(LoginRequest request) {
+    public async Task<IActionResult> Login(LoginRequest request) {
 
-        ErrorOr.ErrorOr<AuthenticationResult> authResult = authenticationQueryService.Login(
+        var command = new LoginCommand(
             request.Email,
             request.Password
         );
+
+
+        ErrorOr.ErrorOr<AuthenticationResult> authResult = await mediator.Send(command);
 
         return authResult.Match(
             authResult => Ok(MapResponse(authResult)),
@@ -58,11 +59,12 @@ public class AuthController : ApiController
 
     private AuthenticationResponse MapResponse(AuthenticationResult authResult) {
         return new AuthenticationResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.LastName,
-            authResult.Email,
+            authResult.User.Id,
+            authResult.User.FirstName,
+            authResult.User.LastName,
+            authResult.User.Email,
             authResult.Token);
+    }   
     }   
 }
 
