@@ -1,28 +1,32 @@
 
 using Microsoft.AspNetCore.Mvc;
-using ZehirZikkim.Application.Services.Authentication;
+using ZehirZikkim.Application.Services.Authentication.Command;
+using ZehirZikkim.Application.Services.Authentication.Common;
+using ZehirZikkim.Application.Services.Authentication.Query;
 using ZehirZikkim.Contracts.Authentication;
 
 
 namespace ZehirZikkim.Api.Controllers;
 
 
-[ApiController]
-[Route("auth")]
-public class AuthController : ControllerBase
-{
- 
-    private readonly IAuthenticationService authenticationService;
 
-    public AuthController(IAuthenticationService authenticationService)
+[Route("auth")]
+public class AuthController : ApiController
+{
+    
+    private readonly IAuthenticationQueryService authenticationQueryService;
+    private readonly IAuthenticationCommandService authenticationCommandService;
+
+    public AuthController(IAuthenticationCommandService authenticationCommandService, IAuthenticationQueryService authenticationQueryService)
     {
-        this.authenticationService = authenticationService;
+        this.authenticationCommandService = authenticationCommandService;
+        this.authenticationQueryService = authenticationQueryService;
     }
 
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request) {
 
-        var authResult = authenticationService.Register(
+        ErrorOr.ErrorOr<AuthenticationResult> authResult = authenticationCommandService.Register(
             request.FirstName,
             request.LastName,
             request.Email,
@@ -30,32 +34,36 @@ public class AuthController : ControllerBase
 
         );
 
-        var response = new AuthenticationResponse(
-            authResult.Id,
-            authResult.FirstName,
-            authResult.LastName,
-            authResult.Email,
-            authResult.Token);
+        return authResult.Match(
+            authResult => Ok(MapResponse(authResult)),
+            Problem
+        );
 
-        return Ok(response);
+       
     }
 
     [HttpPost("Login")]
     public IActionResult Login(LoginRequest request) {
 
-        var authResult = authenticationService.Login(
+        ErrorOr.ErrorOr<AuthenticationResult> authResult = authenticationQueryService.Login(
             request.Email,
             request.Password
         );
 
-        var response = new AuthenticationResponse(
+        return authResult.Match(
+            authResult => Ok(MapResponse(authResult)),
+            Problem
+        );
+    }
+
+    private AuthenticationResponse MapResponse(AuthenticationResult authResult) {
+        return new AuthenticationResponse(
             authResult.Id,
             authResult.FirstName,
             authResult.LastName,
             authResult.Email,
             authResult.Token);
-        return Ok(response);
-    }
+    }   
 }
 
 
