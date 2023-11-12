@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using ZehirZikkim.Api.Errors;
+using ZehirZikkim.Api.Common.Errors;
 using ZehirZikkim.Application;
 using ZehirZikkim.Infrastructure;
 

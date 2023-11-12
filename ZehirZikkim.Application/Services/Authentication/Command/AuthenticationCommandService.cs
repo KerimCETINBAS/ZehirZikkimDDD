@@ -1,10 +1,12 @@
+using ErrorOr;
 using ZehirZikkim.Application.Common.Interfaces.Authentication;
 using ZehirZikkim.Application.Common.Interfaces.Persistence;
+using ZehirZikkim.Application.Services.Authentication.Common;
+using ZehirZikkim.Domain.Common.Errors;
 using ZehirZikkim.Domain.Entities;
+namespace ZehirZikkim.Application.Services.Authentication.Command;
 
-namespace ZehirZikkim.Application.Services.Authentication;
-
-public class AuthenticationService : IAuthenticationService
+public class AuthenticationService : IAuthenticationCommandService
 {
 
     private readonly IUserRepository userRepository;
@@ -15,12 +17,12 @@ public class AuthenticationService : IAuthenticationService
         this.userRepository = userRepository;
     }
 
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password)
+    public ErrorOr<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
     {
 
         // validate user doesn't exists
-        if(userRepository.GetUserByEmail(email) != null) {
-            throw new Exception("User with given email already exist");
+        if(userRepository.GetUserByEmail(email) is null) {
+            return Errors.User.EmailConflictException;
         }
 
         Guid userId = Guid.NewGuid();
@@ -44,20 +46,4 @@ public class AuthenticationService : IAuthenticationService
         return new AuthenticationResult(userId, firstName, lastName, email, token);
     }
 
-    public AuthenticationResult Login(string email, string password)
-    {
-        // validate user exists
-        if(userRepository.GetUserByEmail(email) is not User user) {
-          
-            throw new Exception("user does not exist");
-        }
-        // validate password if user exists
-        if (user.Password != password) {
-            throw new Exception("Invalid credentials");
-        }
-        // create token
-        string token = jwtTokenGenerator.GenerateToken(user.Id, user.FirstName, user.LastName);
-
-        return new AuthenticationResult(Guid.NewGuid(), user.FirstName, user.LastName, email, token);
-    }
 }

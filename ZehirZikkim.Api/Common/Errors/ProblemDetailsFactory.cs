@@ -1,10 +1,12 @@
 using System.Diagnostics;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
+using ZehirZikkim.Api.Common.Http;
 
-namespace ZehirZikkim.Api.Errors;
+namespace ZehirZikkim.Api.Common.Errors;
 
 
 internal sealed class ZehirZikkimProblemDetailsFactory : ProblemDetailsFactory
@@ -91,8 +93,11 @@ internal sealed class ZehirZikkimProblemDetailsFactory : ProblemDetailsFactory
         {
             problemDetails.Extensions["traceId"] = traceId;
         }
+        
+        List<Error>? errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
 
-        problemDetails.Extensions.Add("customProperty", "cutemValue");
+        if (errors is not null)  problemDetails.Extensions.Add("errors", errors);
+      
         _configure?.Invoke(new() { HttpContext = httpContext!, ProblemDetails = problemDetails });
     }
 }
