@@ -39,5 +39,5 @@ nupkg/
 **/[Oo]bj/
 **/[Oo]ut/
 **/msbuild.log
-**/msbuild.err
-**/msbuild.wrn
+/msbuild.err
+/msbuild.wrn
