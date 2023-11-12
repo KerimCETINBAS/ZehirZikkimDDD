@@ -21,3 +21,4 @@
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/refint/ZehirZikkim.Domain.dll
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.pdb
 /home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ref/ZehirZikkim.Domain.dll
+/home/stella/tutorials/ddd_tutorial/ZehirZikkim/ZehirZikkim.Domain/obj/Debug/net7.0/ZehirZikkim.Domain.csproj.AssemblyReference.cache

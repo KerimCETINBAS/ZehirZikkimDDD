@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using ZehirZikkim.Application.Services.Authentication;
+﻿
+using System.Reflection;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ZehirZikkim.Application;
 
@@ -7,7 +9,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services) {
 
-        services.AddScoped<IAuthenticationService, AuthenticationService>();
+        services.AddMediatR( x => x.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
         return services;
     }
 }

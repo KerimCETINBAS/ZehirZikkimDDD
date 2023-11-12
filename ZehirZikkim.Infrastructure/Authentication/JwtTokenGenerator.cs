@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ZehirZikkim.Application.Common.Interfaces.Authentication;
 using ZehirZikkim.Application.Common.Interfaces.Services;
+using ZehirZikkim.Domain.Entities;
 using ZehirZikkim.Infrastructure.Services;
 
 namespace ZehirZikkim.Infrastructure.Authentication;
@@ -20,7 +21,7 @@ public class jwtTokenGenerator : IJwtTokenGenerator
         this.dateTimeProvider = dateTimeProvider;
         this.jwtSettings = jwtSettings.Value;
     }
-    public string GenerateToken(Guid userId, string firstName, string lastName) {
+    public string GenerateToken(User user) {
 
    
 
@@ -29,9 +30,9 @@ public class jwtTokenGenerator : IJwtTokenGenerator
             SecurityAlgorithms.HmacSha256
         );
         Claim[] claims = new[] {
-            new Claim(JwtRegisteredClaimNames.Sub, $"{firstName} {lastName}"),
-            new Claim(JwtRegisteredClaimNames.GivenName, firstName),
-            new Claim(JwtRegisteredClaimNames.FamilyName, lastName),
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
+            new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
           
