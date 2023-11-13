@@ -7,7 +7,7 @@ using ZehirZikkim.Application.Authentication.Common;
 using ZehirZikkim.Domain.Entities;
 using ZehirZikkim.Domain.Common.Errors;
 public class LoginQueryHandler :
-    IRequestHandler<LoginCommand, ErrorOr<AuthenticationResult>>
+    IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
 {
 
     private readonly IJwtTokenGenerator jwtTokenGenerator;
@@ -21,16 +21,16 @@ public class LoginQueryHandler :
 
     
     
-    public async Task<ErrorOr<AuthenticationResult>> Handle(LoginCommand command, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
         
         await Task.CompletedTask;
-        if(userRepository.GetUserByEmail(command.Email) is not User user) {
+        if(userRepository.GetUserByEmail(query.Email) is not User user) {
           
             return Errors.Auth.CredentialsInvalidException;
         }
         // validate password if user exists
-        if (user.Password != command.Password) {
+        if (user.Password != query.Password) {
             return Errors.Auth.CredentialsInvalidException;
         }
         // create token
