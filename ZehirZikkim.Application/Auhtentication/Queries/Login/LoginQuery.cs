@@ -6,6 +6,6 @@ namespace ZehirZikkim.Application.Auhtentication.Queries.Login;
 
 
 
-public record LoginCommand(
+public record LoginQuery(
     string Email,
     string Password):IRequest<ErrorOr<AuthenticationResult>>;

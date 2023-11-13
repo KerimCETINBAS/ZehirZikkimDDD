@@ -1,4 +1,5 @@
 
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ZehirZikkim.Application.Auhtentication.Commands.Register;
@@ -16,24 +17,22 @@ public class AuthController : ApiController
 {
     
     private readonly ISender mediator;
+    private readonly IMapper mapper;
 
-    public AuthController(ISender mediator)
+    public AuthController(ISender mediator, IMapper mapper)
     {
         this.mediator = mediator;
+        this.mapper = mapper;
     }
 
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterRequest request) {
 
-        var command = new RegisterCommand(
-            request.FirstName,
-            request.LastName,
-            request.Email,
-            request.Password);
+        var command = mapper.Map<RegisterCommand>(request);
         ErrorOr.ErrorOr<AuthenticationResult> authResult = await mediator.Send(command);
 
         return authResult.Match(
-            authResult => Ok(MapResponse(authResult)),
+            authResult => Ok(mapper.Map<AuthenticationResponse>(authResult)),
             Problem
         );
 
@@ -43,28 +42,16 @@ public class AuthController : ApiController
     [HttpPost("Login")]
     public async Task<IActionResult> Login(LoginRequest request) {
 
-        var command = new LoginCommand(
-            request.Email,
-            request.Password
-        );
-
-
-        ErrorOr.ErrorOr<AuthenticationResult> authResult = await mediator.Send(command);
+       
+        LoginQuery query = mapper.Map<LoginQuery>(request);
+        ErrorOr.ErrorOr<AuthenticationResult> authResult = await mediator.Send(query);
 
         return authResult.Match(
-            authResult => Ok(MapResponse(authResult)),
+            authResult => Ok(mapper.Map<AuthenticationResponse>(authResult)),
             Problem
         );
-    }
 
-    private AuthenticationResponse MapResponse(AuthenticationResult authResult) {
-        return new AuthenticationResponse(
-            authResult.User.Id,
-            authResult.User.FirstName,
-            authResult.User.LastName,
-            authResult.User.Email,
-            authResult.Token);
-    }   
+    }
 }   
 
 
