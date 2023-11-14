@@ -1,7 +1,7 @@
 using ZehirZikkim.Application.Common.Interfaces.Persistence;
 using ZehirZikkim.Domain.MenuAggregate;
 
-namespace ZehirZikkim.Infrastructure.Persistence;
+namespace ZehirZikkim.Infrastructure.Persistence.Memory.Repositories;
 
 
 public class MenuRepository: IMenuRepository {

@@ -1,0 +1,1 @@
+namespace ZehirZikkim.Infrastructure.Persistence.EFCore.Configurations;

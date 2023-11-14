@@ -1,14 +1,13 @@
-﻿using System.Text;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ZehirZikkim.Application.Common.Interfaces.Authentication;
-using ZehirZikkim.Application.Common.Interfaces.Persistence;
 using ZehirZikkim.Application.Common.Interfaces.Services;
 using ZehirZikkim.Infrastructure.Authentication;
-using ZehirZikkim.Infrastructure.Persistence;
+using ZehirZikkim.Infrastructure.Persistence.Memory.Common;
 using ZehirZikkim.Infrastructure.Services;
 
 namespace ZehirZikkim.Infrastructure;
@@ -21,14 +20,12 @@ public static class DependencyInjection
             .AddAuth(configuration)
             .AddPersistence();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
-        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 
     public static IServiceCollection AddPersistence(this IServiceCollection services) {
-        services.AddScoped<IUserRepository, UserRepository>();
-        services.AddScoped<IMenuRepository, MenuRepository>();
-
+        services.UseMemoryPersistence(); // AddEFCorePersistence() // etc
+     
         return services;
     }
 
