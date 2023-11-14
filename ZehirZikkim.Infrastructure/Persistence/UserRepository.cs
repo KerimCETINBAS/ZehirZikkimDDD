@@ -1,5 +1,5 @@
 using ZehirZikkim.Application.Common.Interfaces.Persistence;
-using ZehirZikkim.Domain.Entities;
+using ZehirZikkim.Domain.User.Domain;
 
 namespace ZehirZikkim.Infrastructure.Persistence;
 

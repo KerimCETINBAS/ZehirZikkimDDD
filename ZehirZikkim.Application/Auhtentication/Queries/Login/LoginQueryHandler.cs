@@ -4,7 +4,7 @@ using ZehirZikkim.Application.Auhtentication.Queries.Login;
 using ZehirZikkim.Application.Common.Interfaces.Authentication;
 using ZehirZikkim.Application.Common.Interfaces.Persistence;
 using ZehirZikkim.Application.Authentication.Common;
-using ZehirZikkim.Domain.Entities;
+using ZehirZikkim.Domain.User.Domain;
 using ZehirZikkim.Domain.Common.Errors;
 public class LoginQueryHandler :
     IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>

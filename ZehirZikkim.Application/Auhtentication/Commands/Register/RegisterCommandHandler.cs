@@ -3,7 +3,7 @@ using MediatR;
 using ZehirZikkim.Application.Common.Interfaces.Authentication;
 using ZehirZikkim.Application.Common.Interfaces.Persistence;
 using ZehirZikkim.Application.Authentication.Common;
-using ZehirZikkim.Domain.Entities;
+using ZehirZikkim.Domain.User.Domain;
 using ZehirZikkim.Domain.Common.Errors;
 namespace ZehirZikkim.Application.Auhtentication.Commands.Register;
 
@@ -32,14 +32,12 @@ public class RegisterCommandHandler :
 
             Guid userId = Guid.NewGuid();
             // create a new user (generate unique identifier)
-            User user = new()
-            {
-                FirstName = command.FirstName,
-                LastName = command.LastName,
-                Email = command.Email,
-                Password = command.Password
-            };
-
+            User user = User.Create(
+                command.FirstName,
+                command.LastName,
+                command.Email,
+                command.Password
+            );
             userRepository.Add(user);
 
         

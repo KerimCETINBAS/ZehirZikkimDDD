@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ZehirZikkim.Application.Common.Interfaces.Authentication;
 using ZehirZikkim.Application.Common.Interfaces.Services;
-using ZehirZikkim.Domain.Entities;
+using ZehirZikkim.Domain.User.Domain;
 using ZehirZikkim.Infrastructure.Services;
 
 namespace ZehirZikkim.Infrastructure.Authentication;
@@ -30,7 +30,7 @@ public class jwtTokenGenerator : IJwtTokenGenerator
             SecurityAlgorithms.HmacSha256
         );
         Claim[] claims = new[] {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.Value.ToString()),
             new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
             new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())

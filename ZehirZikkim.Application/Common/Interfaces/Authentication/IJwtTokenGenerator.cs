@@ -1,4 +1,4 @@
-using ZehirZikkim.Domain.Entities;
+using ZehirZikkim.Domain.User.Domain;
 
 namespace ZehirZikkim.Application.Common.Interfaces.Authentication;
 

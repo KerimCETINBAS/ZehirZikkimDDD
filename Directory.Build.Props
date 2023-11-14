@@ -1,0 +1,11 @@
+<Project>
+    
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnvironmentName>Development</EnvironmentName>
+  </PropertyGroup>
+
+</Project>
