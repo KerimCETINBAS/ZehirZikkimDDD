@@ -1,7 +1,5 @@
 namespace ZehirZikkim.Domain.Common.Models;
 
-
-
 public abstract class ValueObject: IEquatable<ValueObject> {
     public abstract IEnumerable<object> GetEqualityComponents();
 
@@ -30,21 +28,5 @@ public abstract class ValueObject: IEquatable<ValueObject> {
     public bool Equals(ValueObject? other)
     {
         return Equals((object?)other);
-    }
-}
-
-public class Price: ValueObject {
-    public decimal Ammount {get; private set; }
-    public string Currency { get; private set; }
-
-
-    public Price(decimal amount, string currency) {
-        Ammount = amount;
-        Currency = currency;
-    } 
-
-    public override IEnumerable<object> GetEqualityComponents() {
-        yield return Ammount;
-        yield return Currency;
     }
 }

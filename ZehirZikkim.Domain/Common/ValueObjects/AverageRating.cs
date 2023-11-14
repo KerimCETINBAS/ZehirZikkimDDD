@@ -3,8 +3,8 @@ using ZehirZikkim.Domain.Common.Models;
 namespace ZehirZikkim.Domain.Common.ValueObjects;
 
 public sealed class AverageRating : ValueObject {   
-    public double Value;
-    public int NumOfTotalRates;
+    public double Value { get; private set; } 
+    public int NumOfTotalRates { get; private set; }
 
     private AverageRating(double rating, int total) {
         Value = rating;

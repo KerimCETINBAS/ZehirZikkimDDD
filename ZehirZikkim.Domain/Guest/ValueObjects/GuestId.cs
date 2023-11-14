@@ -1,17 +1,17 @@
 using ZehirZikkim.Domain.Common.Models;
 
-namespace ZehirZikkim.Domain.User.ValueObjects;
+namespace ZehirZikkim.Domain.Guest.ValueObjects;
 
-public sealed class UserId : ValueObject {
-
+public sealed class GuestId : ValueObject
+{
     public Guid Value { get; }
 
-    private UserId(Guid value) {
+    private GuestId(Guid value) {
         Value = value;
     }
 
-    public static UserId CreateUnique() => new(Guid.NewGuid());
-    
+    public static GuestId CreateUnique() => new(Guid.NewGuid());
+
     public override IEnumerable<object> GetEqualityComponents() {
         yield return Value;
     }
