@@ -1,0 +1,13 @@
+using ZehirZikkim.Application.Common.Interfaces.Persistence;
+using ZehirZikkim.Domain.MenuAggregate;
+
+namespace ZehirZikkim.Infrastructure.Persistence;
+
+
+public class MenuRepository: IMenuRepository {
+
+    private static readonly List<Menu> menus = new();
+    public void Add(Menu menu) {
+        menus.Add(menu);
+    }
+}
