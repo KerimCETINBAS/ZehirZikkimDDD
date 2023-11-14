@@ -34,7 +34,7 @@ class Dinner
         {
             "id": { "value": "00000000-0000-0000-0000-000000000000" },
             "guestCount": 2,
-            "reservationStatus": "Reserved", // PendingGuestConfirmation, Reserved, Cancelled
+            "status": "Reserved", // PendingGuestConfirmation, Reserved, Cancelled
             "guestId": { "value": "00000000-0000-0000-0000-000000000000" },
             "billId": { "value": "00000000-0000-0000-0000-000000000000 }",
             "arrivalDateTime": null,

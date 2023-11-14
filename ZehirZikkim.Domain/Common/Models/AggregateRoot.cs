@@ -2,10 +2,8 @@ namespace ZehirZikkim.Domain.Common.Models;
 
 
 public abstract class AggregateRoot<TId> :
-    Entity<TId> where TId: notnull
-{
-    protected AggregateRoot(TId id) : base(id)
-    {
+    Entity<TId> where TId: notnull {
+    protected AggregateRoot(TId id) : base(id) {
         Id = id;
     }
 }
